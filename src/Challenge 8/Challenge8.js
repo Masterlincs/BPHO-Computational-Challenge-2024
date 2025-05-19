@@ -98,7 +98,7 @@ const AnimatedProjectileMotionSimulator = () => {
         } else {
             animationRef.current = requestAnimationFrame(animate);
         }
-    }, [trajectoryPoints, isRecording]);
+    }, [trajectoryPoints, isRecording, stopRecording]);
 
     useEffect(() => {
         if (isAnimating) {

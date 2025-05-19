@@ -45,7 +45,7 @@ const TrajectoryCalculator = () => {
       t += 0.02;
     }
     return points;
-  }, [angle, grav, launchSpeed, height]);
+  }, [angle, grav, launchSpeed, height, calculateTrajectory]);
 
   useEffect(() => {
     setTrajectory(trajectoryData);
@@ -62,7 +62,7 @@ const TrajectoryCalculator = () => {
         clearInterval(intervalRef.current);
       }
     };
-  }, [trajectory]);
+  }, [trajectory, startAnimation]);
 
   const startAnimation = () => {
     if (intervalRef.current) {

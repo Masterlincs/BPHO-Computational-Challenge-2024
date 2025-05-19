@@ -29,11 +29,11 @@ const PlanetaryProjectileMotion = () => {
       }
       window.removeEventListener('resize', handleWindowResize);
     };
-  }, []);
+  }, [initScene, animate]);
 
   useEffect(() => {
     calculateTrajectory();
-  }, [initialVelocity, angle, planetRadius, rotationPeriod]);
+  }, [initialVelocity, angle, planetRadius, rotationPeriod, calculateTrajectory]);
 
   useEffect(() => {
     updatePlanetTexture();
@@ -113,8 +113,7 @@ const PlanetaryProjectileMotion = () => {
     const v0 = initialVelocity;
     const theta = angle * (Math.PI / 180);
     const omega = 2 * Math.PI / rotationPeriod; // Angular velocity of the planet
-  
-    let t = 0;
+
     const dt = 0.1;
     const trajectoryPoints = [];
   
@@ -147,7 +146,6 @@ const PlanetaryProjectileMotion = () => {
       vz += az * dt;
   
       trajectoryPoints.push({ x, y, z });
-      t += dt;
     }
   
     if (trajectoryPoints.length > 0) {

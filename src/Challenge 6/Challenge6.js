@@ -65,7 +65,7 @@ function ProjectileMotionSimulator() {
         clearInterval(intervalRef.current);
       }
     };
-  }, [trajectoryData]);
+  }, [trajectoryData, startAnimation]);
 
   const startAnimation = () => {
     if (intervalRef.current) {

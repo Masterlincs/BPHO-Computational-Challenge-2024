@@ -18,16 +18,6 @@ function ProjectileMotionSimulator() {
   const chartRef = useRef();
   const intervalRef = useRef(null);
 
-  const calculateTrajectory = useCallback((angle, u, g, h) => {
-    const radians = angle * Math.PI / 180;
-    const vx = u * Math.cos(radians);
-    const vy = u * Math.sin(radians);
-    const flightTime = (vy + Math.sqrt(vy * vy + 2 * g * h)) / g;
-    const range = vx * flightTime;
-    const maxHeight = h + (vy * vy) / (2 * g);
-    return { range, maxHeight, flightTime };
-  }, []);
-
   const calculateLaunchAngle = useCallback((x, y, u, g) => {
     const theta1 = Math.atan((u * u + Math.sqrt(Math.pow(u, 4) - g * (g * x * x + 2 * y * u * u))) / (g * x));
     const theta2 = Math.atan((u * u - Math.sqrt(Math.pow(u, 4) - g * (g * x * x + 2 * y * u * u))) / (g * x));

@@ -77,7 +77,7 @@ const ProjectileMotionComparison = () => {
         }
     
         return data;
-    }, [launchHeight, launchAngle, gravity, launchSpeed, dragCoefficient, crossSectionalArea, objectMass, scaleHeight, seaLevelDensity]);
+    }, [launchHeight, launchAngle, gravity, launchSpeed, dragCoefficient, crossSectionalArea, objectMass, scaleHeight, seaLevelDensity, calculateAirDensity]);
 
     useEffect(() => {
         const data = calculateTrajectoryPoints();

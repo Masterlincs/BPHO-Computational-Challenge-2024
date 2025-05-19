@@ -19,7 +19,7 @@ const TrajectoryCalculator = () => {
 
   useEffect(() => {
     calculateTrajectory();
-  }, [initialVelocity, angle, height]);
+  }, [initialVelocity, angle, height, calculateTrajectory]);
 
   useEffect(() => {
     if (trajectory.length > 0) {
@@ -30,7 +30,7 @@ const TrajectoryCalculator = () => {
         clearInterval(intervalRef.current);
       }
     };
-  }, [trajectory]);
+  }, [trajectory, startAnimation]);
 
   const calculateTrajectory = () => {
     const g = 9.81;

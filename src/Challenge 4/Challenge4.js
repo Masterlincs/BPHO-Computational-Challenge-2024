@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState, useRef, useCallback } from "react"
 import { Chart, registerables } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import 'chartjs-plugin-annotation';
-import styles from './Challenge4.css';
 
 Chart.register(...registerables);
 
