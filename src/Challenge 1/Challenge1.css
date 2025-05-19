@@ -1,0 +1,142 @@
+body {
+    background-color: #e6f2ff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+  
+  .challenge-container {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    width: 80%;
+    margin: 20px 10%; /* This creates a 10% margin on left and right */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 86, 179, 0.2);
+  }
+  
+  .challenge-title {
+    color: #0056b3;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .calculator-title {
+    color: #0056b3;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .input-group:last-child {
+    margin-right: 0;
+  }
+  
+  label {
+    color: #0056b3;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #0056b3;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #0056b3;
+  }
+  
+  .btn-primary:hover {
+    background-color: #003d82;
+  }
+  
+  .btn-disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .btn + .btn {
+    margin-left: 10px;
+  }
+  
+  .chart-container {
+    height: 60vh;
+    margin-bottom: 20px;
+  }
+  
+  .trajectory-data {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.1);
+  }
+  
+  .trajectory-data h3 {
+    color: #0056b3;
+    margin-top: 0;
+  }
+  
+  .trajectory-data ul {
+    color: #0056b3;
+    padding-left: 20px;
+  }
+  
+  @media (max-width: 1200px) {
+    .challenge-container {
+      width: 90%;
+      margin: 20px 5%; /* Adjusted margin for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .challenge-container {
+      width: 95%;
+      margin: 20px 2.5%; /* Further adjusted margin for mobile screens */
+    }
+  
+    .input-container {
+      flex-direction: column;
+    }
+  
+    .input-group {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .chart-container {
+      height: 50vh;
+    }
+  }
